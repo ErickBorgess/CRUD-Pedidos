@@ -1,0 +1,19 @@
+### Criar um novo pedido
+POST http://localhost:8080/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente": "Erick",
+  "itens": "Pititinga",
+  "valor": 20
+}
+
+### Listar todos os pedidos
+GET http://localhost:8080/api/pedidos
+
+### Buscar um pedido específico pelo ID
+GET http://localhost:8080/api/pedidos/1
+
+### Deletar um pedido pelo ID
+DELETE http://localhost:8080/api/pedidos/1
+
