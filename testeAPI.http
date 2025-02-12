@@ -3,9 +3,9 @@ POST http://localhost:8080/api/pedidos
 Content-Type: application/json
 
 {
-  "cliente": "Erick",
-  "itens": "Pititinga",
-  "valor": 20
+  "cliente": "Joao",
+  "itens": "cerveja",
+  "valor": 3.5
 }
 
 ### Listar todos os pedidos
@@ -15,5 +15,5 @@ GET http://localhost:8080/api/pedidos
 GET http://localhost:8080/api/pedidos/1
 
 ### Deletar um pedido pelo ID
-DELETE http://localhost:8080/api/pedidos/1
+DELETE http://localhost:8080/api/pedidos/3
 
