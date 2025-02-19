@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/comandas.css">
+</head>
+<body>
+    <div class="bg-panel">
+        <div class="bg-form">
+            <h1>CADASTRO PEDIDO</h1>
+            <form action="" class="form">
+                <label for="txtCliente">Cliente </label>
+                <input type="text" name="txtCliente" id="txtCliente" placeholder="cliente"><br>
+                <label for="txtItens">Itens </label>
+                <input type="text" name="txtItens" id="txtItens" placeholder="itens"><br>
+                <label for="txtValor">Valor </label>
+                <input type="number" step="0.010" name="txtValor" id="txtValor" placeholder="valor"><br>
+                <button>Cadastrar</button>
+            </form>
+            <form action="" class="form">
+                <label for="txtId">ID DELETAR </label>
+                <input type="number" id="idSeletor" placeholder="ID Delete"><br>
+                <button onclick="deletarPedido()">Deletar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script/cadPedido.js"></script>
+</body>
+</html>

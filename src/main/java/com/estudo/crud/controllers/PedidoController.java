@@ -24,14 +24,14 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
-    @GetMapping
-    public List<Pedido> listarPedidos() {
-        return pedidoService.listarPedidos();
-    }
-
     @PostMapping
     public Pedido criarPedido(@RequestBody Pedido pedido) {
         return pedidoService.criarPedido(pedido);
+    }
+
+    @GetMapping
+    public List<Pedido> listarPedidos() {
+        return pedidoService.listarPedidos();
     }
 
     @GetMapping("/{id}")

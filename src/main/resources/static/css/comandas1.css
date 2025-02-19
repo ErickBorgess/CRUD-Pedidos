@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #5c7376;
+}
+
+header {
+    background-color: #5095BF;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+}
+
+/*CADASTRO*/
+.bg-panel {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;    
+}
+
+.bg-form {
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form {
+    text-align: center;
+    margin-bottom: 20px;
+}
