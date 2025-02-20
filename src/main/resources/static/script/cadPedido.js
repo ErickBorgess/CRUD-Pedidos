@@ -41,6 +41,10 @@ function deletarPedido() {
         .catch(function(res) {console.log(res)})
 };
 
+function atualizarPedido() {
+    
+}
+
 function limparCampos() {
     Icliente.value = "";
     Iitens.value = "";
