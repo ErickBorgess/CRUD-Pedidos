@@ -1,0 +1,1 @@
+A 'classe' Service é criada para fazer uma ponte entre o Controller e o Repositório, para poder implementar regras de negócios.

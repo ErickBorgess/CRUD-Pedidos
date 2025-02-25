@@ -14,7 +14,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) //Desabilita o CSRF
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/h2-console/**").permitAll() //Libera acesso ao h2
-                .requestMatchers("/api/**").permitAll() //Libera a api (opção)
+                .requestMatchers("/**").permitAll() //Libera a api (opção)
                 .anyRequest().authenticated() //Restringe outras rotas
             )
             .headers(headers -> headers.frameOptions().disable()) //permite o h2 rodar corretamente

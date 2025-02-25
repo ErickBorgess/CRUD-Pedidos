@@ -26,6 +26,7 @@ public class PedidoService {
     public Pedido criarPedido(Pedido pedido) {
         return pedidoRepository.save(pedido);
     }
+    
     public void deletarPedido(Long id) {
         pedidoRepository.deleteById(id);
     }

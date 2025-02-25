@@ -30,7 +30,8 @@ function load() {
         })
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
     load();
-    setInterval(5000);
+    setInterval(5);
 });

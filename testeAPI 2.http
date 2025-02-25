@@ -1,0 +1,19 @@
+### Criar um novo pedido
+POST http://localhost:8080/mesas
+Content-Type: application/json
+
+{
+  "descricaoMesa": "Erick",
+  "itens": "caldo",
+  "valor": 3.5
+}
+
+### Listar todos os pedidos
+GET http://localhost:8080/mesas
+
+### Buscar um pedido específico pelo ID
+GET http://localhost:8080/mesas/2
+
+### Deletar um pedido pelo ID
+DELETE http://localhost:8080/mesas/1
+

@@ -27,10 +27,9 @@ h1 {
 }
 
 .home {
-    border: 1px solid black;
-    background-color: #ccc;
     font-size: 20px;
-    color: black;
+    font-weight: bold;
+    color: white;
     width: 10%;
     height: 10%;
 }
