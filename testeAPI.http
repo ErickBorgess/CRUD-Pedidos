@@ -3,9 +3,14 @@ POST http://localhost:8080/api/pedidos
 Content-Type: application/json
 
 {
-  "cliente": "Joao",
-  "itens": "cerveja",
-  "valor": 3.5
+  "cliente": "Erick",
+  "itens": "caldo",
+  "valor": 3.5,
+},
+{
+  "cliente": "Rodrigo",
+  "itens": "pititinga",
+  "valor": 15
 }
 
 ### Listar todos os pedidos

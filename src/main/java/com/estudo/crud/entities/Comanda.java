@@ -22,7 +22,7 @@ public class Comanda {
     @JoinColumn(name = "mesa_id")
     private Mesa mesa;
 
-    @OneToMany
+    /*@OneToMany*/
 
     private LocalDateTime dataAbertura;
 

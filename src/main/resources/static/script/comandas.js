@@ -2,7 +2,8 @@ function load() {
     fetch("http://localhost:8080/api/pedidos")
         .then(response => response.json())
         .then(pedidos => {
-            const container = document.querySelector("#pedidos-container")
+            const container = document.querySelector("#pedidos-container");
+            container.innerHTML = "";
             let i = 1
 
             pedidos.map(pedido => {
@@ -28,3 +29,8 @@ function load() {
             })
         })
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    load();
+    setInterval(5000);
+});

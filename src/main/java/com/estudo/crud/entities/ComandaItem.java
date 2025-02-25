@@ -9,5 +9,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "comanda_item")
 public class ComandaItem {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idComandaItem;
 }
