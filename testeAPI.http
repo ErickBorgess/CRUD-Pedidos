@@ -5,12 +5,7 @@ Content-Type: application/json
 {
   "cliente": "Erick",
   "itens": "caldo",
-  "valor": 3.5,
-},
-{
-  "cliente": "Rodrigo",
-  "itens": "pititinga",
-  "valor": 15
+  "valor": 3.5
 }
 
 ### Listar todos os pedidos

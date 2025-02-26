@@ -29,25 +29,33 @@ public class ComandaService {
         comandaItem.setComanda(comanda);
         comandaItem.setItem(item);
         comandaItem.setQuantidade(quantidade);
-        comandaItem.setPrecoUnitario(quantidade);
+        comandaItem.setPrecoUnitario(item.getPreco());
 
         comandaItem.getItem().add(comandaItem);
         return comandaRepository.save(comanda);
     }
 
-    private List<Comanda> listarComandas() {
+    public List<Comanda> listarComandas() {
         return comandaRepository.findAll();
     }
 
-    private Optional<Comanda> buscarComanda(Long id) {
+    public Optional<Comanda> buscarComanda(Long id) {
         return comandaRepository.findById(id);
     }
 
-    private Comanda criarComanda(Comanda comanda) {
+    public Comanda criarComanda(Comanda comanda) {
         return comandaRepository.save(comanda);
     }
 
-    private void deletarComanda(Long id) {
+    public void deletarComanda(Long id) {
         comandaRepository.deleteById(id);
     }
+
+    public void fecharComanda(Long id) {
+        Comanda comanda = comandaRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Comanda não encontrada"));
+        comanda.setStatus(false);
+        comandaRepository.save(comanda);
+    }
+
 }

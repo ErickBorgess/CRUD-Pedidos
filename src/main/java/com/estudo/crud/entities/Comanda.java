@@ -14,14 +14,12 @@ public class Comanda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idComanda; //PK
 
-    @ManyToOne
-    @JoinColumn(name = "mesa_id")
-    private Mesa mesa;
-
-    @OneToMany(mappedBy = "comanda", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "comanda", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ComandaItem> itens;
-
-    private LocalDateTime dataAbertura;
-    private Boolean status;
+    
+    private String descricao;
+    private double valorTotal;
+    private LocalDateTime dataAbertura = LocalDateTime.now();
+    private boolean status = true;
 
 }
