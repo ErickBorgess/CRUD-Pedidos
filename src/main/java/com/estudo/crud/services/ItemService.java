@@ -14,9 +14,12 @@ public class ItemService {
     @Autowired
     private ItemRepository itemRepository;
 
-    /*public Item criarItem(Item item) {
-        return
-    }*/
+    public Item criarItem(String nomeItem, double preco) {
+       Item item = new Item();
+       item.setNomeItem(nomeItem);
+       item.setPreco(preco);
+       return itemRepository.save(item);
+    }
 
     public void deletarItem(Long id) {
         itemRepository.deleteById(id);
