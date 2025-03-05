@@ -14,19 +14,19 @@ public class ComandaItemService {
     @Autowired
     private ComandaItemRepository comandaItemRepository;
 
-    public List<ComandaItem> listarComandas() {
+    public List<ComandaItem> listarComandaItens() {
         return comandaItemRepository.findAll();
     }
 
-    public Optional<ComandaItem> buscarComanda(Long id) {
+    public Optional<ComandaItem> buscarComandaItem(Long id) {
         return comandaItemRepository.findById(id);
     }
 
-    public ComandaItem criarComanda(ComandaItem comandaItem) {
+    public ComandaItem salvarComanda(ComandaItem comandaItem) {
         return comandaItemRepository.save(comandaItem);
     }
 
-    public void deletarComanda(Long id) {
+    public void deletarComandaItem(Long id) {
         comandaItemRepository.deleteById(id);
     }
 }

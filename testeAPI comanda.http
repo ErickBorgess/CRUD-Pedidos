@@ -12,8 +12,8 @@ Content-Type: application/json
 GET http://localhost:8080/pedidos
 
 ### Buscar um pedido específico pelo ID
-GET http://localhost:8080/pedidos/3
+GET http://localhost:8080/pedidos/1
 
 ### Deletar um pedido pelo ID
-DELETE http://localhost:8080/pedidos/2
+DELETE http://localhost:8080/pedidos/1
 

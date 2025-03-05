@@ -1,5 +1,6 @@
 package com.estudo.crud.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +32,9 @@ public class ComandaService {
         comandaItem.setQuantidade(quantidade);
         comandaItem.setPrecoUnitario(item.getPreco());
 
-        comandaItem.getItem().add(comandaItem);
+        comandaItem.getItens().add(comandaItem);
+        comanda.setValorTotal(comanda.getValorTotal() + (item.getPreco() * quantidade));
+
         return comandaRepository.save(comanda);
     }
 
@@ -44,6 +47,8 @@ public class ComandaService {
     }
 
     public Comanda criarComanda(Comanda comanda) {
+        comanda.setValorTotal(0.0);
+        comanda.setItens(new ArrayList<>());
         return comandaRepository.save(comanda);
     }
 
@@ -55,6 +60,10 @@ public class ComandaService {
         Comanda comanda = comandaRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Comanda não encontrada"));
         comanda.setStatus(false);
+        double total = comanda.getItens().stream()
+            .mapToDouble(item -> item.getPrecoUnitario() * item.getQuantidade())
+            .sum();
+        comanda.setValorTotal(total);
         comandaRepository.save(comanda);
     }
 

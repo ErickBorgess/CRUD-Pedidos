@@ -1,0 +1,18 @@
+### Criar um novo item
+POST http://localhost:8080/estoque
+Content-Type: application/json
+
+{
+  "nomeItem": "skol litrinho",
+  "preco": 3.50
+}
+
+### Listar todos os itens do estoque
+GET http://localhost:8080/estoque
+
+### Buscar um item específico pelo ID
+GET http://localhost:8080/estoque/1
+
+### Deletar um item pelo ID
+DELETE http://localhost:8080/estoque/1
+

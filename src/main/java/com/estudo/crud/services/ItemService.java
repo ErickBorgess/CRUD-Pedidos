@@ -21,6 +21,21 @@ public class ItemService {
        return itemRepository.save(item);
     }
 
+    public Item criarItem(Item item) {
+        if (item.getPreco() < 0) {
+            throw new IllegalArgumentException("O preço do item não pode ser negativo!");
+        }
+        return itemRepository.save(item);
+    }
+
+    public Item atualizarItem(Long id, Item itemAtualizado) {
+        return itemRepository.findById(id).map(item -> {
+            item.setNomeItem(itemAtualizado.getNomeItem());
+            item.setPreco(itemAtualizado.getPreco());
+            return itemRepository.save(item);
+        }).orElseThrow(() -> new RuntimeException("Item não encontrado!"));
+    }
+
     public void deletarItem(Long id) {
         itemRepository.deleteById(id);
     }

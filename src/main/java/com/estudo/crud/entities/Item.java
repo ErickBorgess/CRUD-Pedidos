@@ -13,8 +13,4 @@ public class Item {
     private Long idItem; //PK
     private String nomeItem;
     private double preco;
-    public void add(ComandaItem comandaItem) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
-    }
 }
