@@ -32,7 +32,7 @@ public class ComandaService {
         comandaItem.setQuantidade(quantidade);
         comandaItem.setPrecoUnitario(item.getPreco());
 
-        comandaItem.getItens().add(comandaItem);
+        comandaItem.getItem().add(comandaItem);
         comanda.setValorTotal(comanda.getValorTotal() + (item.getPreco() * quantidade));
 
         return comandaRepository.save(comanda);

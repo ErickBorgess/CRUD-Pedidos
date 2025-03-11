@@ -4,13 +4,16 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.estudo.crud.entities.Comanda;
@@ -38,12 +41,13 @@ public class ComandaController {
         return comandaService.buscarComanda(id);
     }
 
-    @PostMapping("/additem")
-    public Comanda adicionarItemComanda(Long idComanda, Long idItem, int quantidade) {
-        return comandaService.adicionarItem(idComanda, idItem, quantidade);
+    @PostMapping("/{idComanda}/add-item")
+    public ResponseEntity<Comanda> adicionarItemComanda(@PathVariable Long idComanda, @RequestParam Long idItem, @RequestParam int quantidade) {
+        Comanda comanda = comandaService.adicionarItem(idComanda, idItem, quantidade);
+        return ResponseEntity.ok(comanda);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}/fechar")
     public void fecharComanda(@PathVariable Long id) {
         comandaService.fecharComanda(id);
     }
