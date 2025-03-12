@@ -21,6 +21,10 @@ public class ItemService {
        return itemRepository.save(item);
     }
 
+    public List<Item> criarItens(List<Item> itens) {
+        return itemRepository.saveAll(itens);
+    }
+
     public Item criarItem(Item item) {
         if (item.getPreco() < 0) {
             throw new IllegalArgumentException("O preço do item não pode ser negativo!");

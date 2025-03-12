@@ -1,0 +1,8 @@
+### Listar todos as comandas-itens
+GET http://localhost:8080/comanda-itens
+
+### Buscar uma comanda-item específica pelo ID
+GET http://localhost:8080/comanda-itens/2
+
+### Deletar uma comanda pelo ID
+DELETE http://localhost:8080/comanda-itens/3

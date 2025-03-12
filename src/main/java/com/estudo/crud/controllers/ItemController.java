@@ -29,6 +29,11 @@ public class ItemController {
         return itemService.criarItem(item);
     }
 
+    @PostMapping("/lote")
+    public List<Item> criarItens(@RequestBody List<Item> itens) {
+        return itemService.criarItens(itens);
+    }
+
     @PutMapping("/{id}")
     public Item atualizarItem(@PathVariable Long id, @RequestBody Item itemAtualizado) {
         return itemService.atualizarItem(id, itemAtualizado);

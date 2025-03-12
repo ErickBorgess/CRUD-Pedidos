@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.estudo.crud.entities.Comanda;
@@ -41,8 +40,8 @@ public class ComandaController {
         return comandaService.buscarComanda(id);
     }
 
-    @PostMapping("/{idComanda}/add-item")
-    public ResponseEntity<Comanda> adicionarItemComanda(@PathVariable Long idComanda, @RequestParam Long idItem, @RequestParam int quantidade) {
+    @PostMapping("/{idComanda}/add-item/{idItem}/{quantidade}")
+    public ResponseEntity<Comanda> adicionarItemComanda(@PathVariable Long idComanda, @PathVariable Long idItem, @PathVariable int quantidade) {
         Comanda comanda = comandaService.adicionarItem(idComanda, idItem, quantidade);
         return ResponseEntity.ok(comanda);
     }

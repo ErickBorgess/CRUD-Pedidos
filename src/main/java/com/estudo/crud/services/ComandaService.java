@@ -32,7 +32,7 @@ public class ComandaService {
         comandaItem.setQuantidade(quantidade);
         comandaItem.setPrecoUnitario(item.getPreco());
 
-        comandaItem.getItem().add(comandaItem);
+        comanda.getItens().add(comandaItem);
         comanda.setValorTotal(comanda.getValorTotal() + (item.getPreco() * quantidade));
 
         return comandaRepository.save(comanda);
@@ -58,7 +58,7 @@ public class ComandaService {
 
     public void fecharComanda(Long id) {
         Comanda comanda = comandaRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Comanda não encontrada"));
+            .orElseThrow(() -> new RuntimeException("Comanda nao encontrada"));
         comanda.setStatus(false);
         double total = comanda.getItens().stream()
             .mapToDouble(item -> item.getPrecoUnitario() * item.getQuantidade())

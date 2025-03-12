@@ -22,4 +22,8 @@ public class Comanda {
     private LocalDateTime dataAbertura = LocalDateTime.now();
     private boolean status = true;
 
+    public List<ComandaItem> getItens() {
+        return itens;
+    }
+
 }

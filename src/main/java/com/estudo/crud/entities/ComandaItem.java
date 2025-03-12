@@ -1,5 +1,7 @@
 package com.estudo.crud.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,6 +16,7 @@ public class ComandaItem {
 
     @ManyToOne
     @JoinColumn(name = "comanda_id")
+    @JsonIgnore
     private Comanda comanda;
 
     @ManyToOne

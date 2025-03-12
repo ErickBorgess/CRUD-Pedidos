@@ -3,15 +3,37 @@ POST http://localhost:8080/estoque
 Content-Type: application/json
 
 {
-  "nomeItem": "skol litrinho",
+  "nomeItem": " litrinho",
   "preco": 3.50
 }
+
+### Criar novos itens
+POST http://localhost:8080/estoque/lote
+Content-Type: application/json
+
+[
+  {
+    "nomeItem": "Cerveja", 
+    "preco": 5.00
+    },
+  {
+    "nomeItem": "Batata Frita",
+    "preco": 15.00
+  },
+  {
+    "nomeItem": "Caldo", 
+    "preco": 8.00
+  }
+]
 
 ### Listar todos os itens do estoque
 GET http://localhost:8080/estoque
 
 ### Buscar um item específico pelo ID
 GET http://localhost:8080/estoque/1
+
+### Atualizar um item pelo ID
+PUT http://localhost:8080/estoque/1
 
 ### Deletar um item pelo ID
 DELETE http://localhost:8080/estoque/1

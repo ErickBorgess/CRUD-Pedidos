@@ -1,19 +1,24 @@
-### Criar um novo pedido
+### Criar uma nova comanda
 POST http://localhost:8080/pedidos
 Content-Type: application/json
 
 {
-  "descricao": "mesa de Erick",
-  "valorTotal": 30,
+  "descricao": "mesa de rodrigo",
   "status": true
 }
 
-### Listar todos os pedidos
+### Adicionar item à comanda
+POST http://localhost:8080/pedidos/2/add-item/1/5
+
+### Listar todos as comandas
 GET http://localhost:8080/pedidos
 
-### Buscar um pedido específico pelo ID
+### Buscar uma comanda específica pelo ID
 GET http://localhost:8080/pedidos/1
 
-### Deletar um pedido pelo ID
-DELETE http://localhost:8080/pedidos/1
+### Fechar uma comanda pelo ID
+PUT http://localhost:8080/pedidos/2/fechar
+
+### Deletar uma comanda pelo ID
+DELETE http://localhost:8080/pedidos/3
 

@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comandas - Kiosk</title>
-    <link rel="stylesheet" href="css/comandas1.css">
+    <link rel="stylesheet" href="css/estoque.css">
 </head>
 <body>
     <header>
         <a href="home.html" class="home">Home</a>
-        <h1>Comandas - Kiosk da Neidinha</h1>
+        <h1>Estoque - Kiosk da Neidinha</h1>
     </header>
     <main>
         <div class="top">
             <div class="bg-panel">
                 <div class="bg-cadastro">
-                    <h2>CADASTRO PEDIDO</h2>
+                    <h2>CADASTRAR ITEM</h2>
                     <form action="" class="form">
-                        <label for="txtCliente">Cliente </label>
-                        <input type="text" name="txtCliente" id="txtCliente" placeholder="cliente"><br>
-                        <label for="txtItens">Itens </label>
-                        <input type="text" name="txtItens" id="txtItens" placeholder="itens"><br>
+                        <label for="txtNome">Nome </label>
+                        <input type="text" name="txtNome" id="txtNome" placeholder="nome"><br>
                         <label for="txtValor">Valor </label>
                         <input type="number" step="0.010" name="txtValor" id="txtValor" placeholder="valor"><br>
                         <button>Cadastrar</button>
@@ -40,7 +38,7 @@
         <div class="container" id="pedidos-container"></div>
         <button onclick="load()">LISTAR</button>
     </main>
-    <script src="script/cadPedido.js"></script>
+    <script src="script/cadItem.js"></script>
     <script src="script/comandas.js"></script>
 </body>
 </html>

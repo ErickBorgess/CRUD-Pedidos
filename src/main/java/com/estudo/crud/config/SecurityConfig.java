@@ -15,7 +15,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/h2-console/**").permitAll() //Libera acesso ao h2
                 .requestMatchers("/**").permitAll() //Libera a api (opção)
-                .anyRequest().authenticated() //Restringe outras rotas
+                //.anyRequest().authenticated() //Restringe outras rotas
             )
             .headers(headers -> headers.frameOptions().disable()) //permite o h2 rodar corretamente
             .formLogin(login -> login.disable()) //Desabilita a tela de login padrão
