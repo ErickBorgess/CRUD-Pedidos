@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Comandas Abertas</h1>
+    </header>
+    <main>
+        <div class="menu">
+            <label for="nomeComanda">Nome da Comanda</label>
+            <input type="text" placeholder="nome" id="nomeComanda">
+            <button class="card" onclick="novaComanda()">Nova Comanda</button>
+        </div>
+        <ul id="lista-comandas" class="menu"></ul>
+    </main>
+    <script defer src="script/comanda.js"></script>
+</body>
+</html>
